@@ -1,0 +1,15 @@
+//
+// Inconsolata Regular
+// http://www.levien.com/type/myfonts/inconsolata.html
+// ------------------------------------------------------
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('#{$inconsolata-font-path}/inconsolata-regular.eot');
+  src: url('#{$inconsolata-font-path}/inconsolata-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$inconsolata-font-path}/inconsolata-regular.woff2') format('woff2'),
+       url('#{$inconsolata-font-path}/inconsolata-regular.woff') format('woff'),
+       url('#{$inconsolata-font-path}/inconsolata-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

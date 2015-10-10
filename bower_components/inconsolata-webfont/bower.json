@@ -1,0 +1,36 @@
+{
+  "name": "inconsolata-webfont",
+  "version": "1.0.3",
+  "homepage": "https://github.com/hakger/inconsolata-webfont",
+  "authors": [
+    "Hubert Kowalski <h.kowalski@hakger.pl>"
+  ],
+  "description": "Inconsolata Webfont for Bower, gulp-flatten and wiredep",
+  "main": [
+    "./css/inconsolata-webfont.css",
+    "./less/inconsolata-webfont.less",
+    "./scss/inconsolata-webfont.scss",
+    "./fonts/*"
+  ],
+  "keywords": [
+    "inconsolata",
+    "webfont",
+    "font",
+    "gulp",
+    "gulp-flatten",
+    "css",
+    "sass",
+    "less",
+    "fontkit",
+    "sans",
+    "sans-serif",
+    "monospace"
+  ],
+  "license": [
+    "OFL-1.1",
+    "MIT"
+  ],
+  "ignore": [
+    "**/.*"
+  ]
+}

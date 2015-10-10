@@ -1,0 +1,122 @@
+
+@brand-white:             #ffffff;
+@brand-light:             #fafbfb;
+
+@brand-primary:           #000000;
+@brand-info:              #ff4d8c;
+@brand-success:           #27c24c;
+@brand-warning:           #ffd021;
+@brand-danger:            #f05050;
+
+@array_brand:             white, light,
+                          primary, info, success, warning, danger;
+
+
+@body-bg:                 @brand-white;
+@text-color:              @brand-primary;
+@text-muted:              #98a5a8;
+
+@link-color:              darken(@text-color, 15%);
+@link-hover-color:        darken(@text-color, 30%);
+
+@font-family-serif:       "Inconsolata", serif;
+@font-family-base:        @font-family-serif;
+
+@font-size-base:          16px;
+@font-size-lg:            ceil((@font-size-base * 1.30));  // ~21px
+@font-size-md:            ceil((@font-size-base * 1.10));  // ~18px
+@font-size-sm:            ceil((@font-size-base * 0.85));  // ~14px
+
+@font-size-h1:            floor((@font-size-base * 2.65)); // ~42px
+@font-size-h2:            floor((@font-size-base * 2.01)); // ~32px
+@font-size-h3:            ceil((@font-size-base * 1.7));   // ~28px
+@font-size-h4:            ceil((@font-size-base * 1.5));   // ~24px
+@font-size-h5:            ceil((@font-size-base * 1.30));  // ~21px
+@font-size-h6:            @font-size-base;                 // ~16px
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~23px
+
+@letter-spacing-base:     0.01em;
+
+@headings-font-family:    inherit;
+@headings-font-weight:    700;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+@headings-small-color:    @brand-light;
+
+@border-radius-base:      0;
+@border-color:            darken(@brand-light, 5%);
+
+@nav-bg:                  lighten(@brand-light, 3%);
+@nav-active:              darken(@brand-light, 3%);
+
+@table-border-color:      lighten(@border-color, 4%);
+@table-striped-color:     lighten(@brand-light, 4.5%);
+
+// aide > wrapper, padding, margin
+@case-size-xxs:           3px;
+@case-size-xs:            5px;
+@case-size-sm:            10px;
+@case-size-base:          15px; //base
+@case-size-md:            20px;
+@case-size-lg:            25px;
+@case-size-xl:            30px;
+@case-size-xxl:           50px;
+
+// buttons
+@btn-default-color:       @text-color;
+@btn-default-bg:          lighten(@brand-light, 5%);
+@btn-default-border:      @border-color;
+@btn-border-radius:       @border-radius-base;
+
+// arrow
+@arrow-width:             8px;
+@arrow-color:             @brand-white;
+@arrow-outer-width:       (@arrow-width + 1);
+@arrow-outer-color:       rgba(0,0,0,0.1);
+
+// i-switch
+@switch-width:            35px;
+@switch-height:           20px;
+
+@switch-xs-width:         20px;
+@switch-xs-height:        12px;
+
+@switch-sm-width:         25px;
+@switch-sm-height:        15px;
+
+@switch-md-width:         40px;
+@switch-md-height:        24px;
+
+@switch-lg-width:         50px;
+@switch-lg-height:        30px;
+
+@switch-xl-width:         60px;
+@switch-xl-height:        35px;
+
+@switch-xxl-width:        90px;
+@switch-xxl-height:       55px;
+
+// i-checks
+@checks-width:            20px;
+@checks-height:           20px;
+
+@checks-xs-width:         12px;
+@checks-xs-height:        12px;
+
+@checks-sm-width:         16px;
+@checks-sm-height:        16px;
+
+@checks-md-width:         24px;
+@checks-md-height:        24px;
+
+@checks-lg-width:         30px;
+@checks-lg-height:        30px;
+
+@checks-xl-width:         40px;
+@checks-xl-height:        40px;
+
+@checks-xxl-width:        50px;
+@checks-xxl-height:       50px;

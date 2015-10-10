@@ -1,0 +1,57 @@
+.jobs {
+  > .ruler {
+    > .line {
+     padding-top: 17px;
+     margin: 0;
+     border-bottom: 1px solid @brand-primary;
+     border-left: 1px solid @brand-primary;
+   }
+   &:first-child {
+     > .line:first-child {
+       border-left: 1px solid transparent;
+     }
+   }
+   &:nth-last-child(2) {
+     > .line {
+       &:first-child {
+         padding-top: 17px;
+         border-bottom: 1px solid @brand-primary;
+       }
+       padding-top: 18px;
+       border-bottom: 0px solid transparent;
+     }
+   }
+  }
+
+  > .experience {
+    > .year {
+      position: absolute;
+      left: -73px;
+      top: -6px;
+      font-size: 15px;
+      width: 50px;
+      text-align: right;
+    }
+  }
+}
+
+.white-box {
+  background-color: @brand-white;
+  .box-shadow(5px 2px 10px rgba(0, 0, 0, 0.05));
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: @brand-white;
+    left: -1000%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.resume-links {
+  .fa:hover {
+    color: @brand-primary !important;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "resume",
+  "version": "1.0.1",
+  "description": "Resume for Killer Designer",
+  "keywords": [
+    "resume",
+    "cv",
+    "designer",
+    "developer",
+    "personal"
+  ],
+  "authors": [
+    "Zafree"
+  ],
+  "license": "MIT",
+  "url": "https://github.com/zafree/resume/blob/master/LICENSE",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "inconsolata-webfont": "~1.0.3"
+  }
+}
