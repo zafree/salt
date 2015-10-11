@@ -1,8 +1,8 @@
 /*!
  * Zafree's Gruntfile
- * http://zafree.github.io/bootaide
+ * http://zafree.github.io/salt
  * Copyright 2014-2015 Zafree
- * Licensed under MIT (https://github.com/zafree/bootaide/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/zafree/salt/blob/master/LICENSE)
  */
 
 module.exports = function(grunt) {
@@ -44,52 +44,89 @@ module.exports = function(grunt) {
 	    }
     },
 
-	watch: {
-    less: {
-			files: 'less/**/*.less',
-			tasks: ['less'],
-      options: {
-        livereload: true
+    concat: {
+    	options: {
+	      banner: '<%= banner %>\n',
+	      separator: ';',
+	    },
+	    dist: {
+	      src: ['js/**.js'],
+	      dest: 'dist/js/<%= pkg.name %>.js'
+	    },
+	  },
+
+    uglify: {
+		  options: {
+	        banner: '<%= banner %>',
+	    },
+	    dist: {
+	        src: ['dist/js/<%= pkg.name %>.js'],
+	        dest: 'dist/js/<%= pkg.name %>.min.js'
+	    }
+    },
+
+	  watch: {
+      less: {
+  			files: 'less/**/*.less',
+  			tasks: ['less'],
+        options: {
+          livereload: true
+        }
+  		},
+  		cssmin: {
+  			files: 'less/**/*.less',
+  			tasks: ['cssmin'],
+        options: {
+          livereload: true
+        }
+  		},
+      concat: {
+  			files: 'js/*.js',
+  			tasks: ['concat'],
+        options: {
+          livereload: true
+        }
+  		},
+  		uglify: {
+  			files: 'js/*.js',
+  			tasks: ['uglify'],
+        options: {
+          livereload: true
+        }
+  		},
+      html: {
+        files: ['**/*.html'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
       }
-		},
-		cssmin: {
-			files: 'less/**/*.less',
-			tasks: ['cssmin'],
-      options: {
-        livereload: true
-      }
-		},
-    html: {
-      files: ['**/*.html'],
-      options: {
-        spawn: false,
-        livereload: true
+	  },
+
+    connect: {
+      server: {
+        options: {
+          port: 9090,
+          base: '.',
+          open: true,
+          livereload: true
+        }
       }
     }
-	},
+    });
 
-  connect: {
-    server: {
-      options: {
-        port: 9090,
-        base: '.',
-        open: true,
-        livereload: true
-      }
-    }
-  }
-  });
+    // Load the plugin that provides the task.
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
-  // Load the plugin that provides the task.
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
+    // Default task(s).
+    grunt.registerTask('build', ['less','cssmin','concat','uglify']);
 
-  // Default task(s).
-  grunt.registerTask('build', ['less', 'cssmin']);
-
-  // Creates the `server` task
-  grunt.registerTask('serve', ['connect', 'watch']);
+    // Creates the `server` task
+    grunt.registerTask('serve', ['connect', 'watch']);
 
 };
