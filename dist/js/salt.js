@@ -1,6 +1,7 @@
 /*!
- * Salt v1.0.0 (http://zafree.github.io)
+ * Salt v1.0.1 (http://zafree.github.io/salt)
  * Copyright 2014-2015 Zafree
+ * Licensed under MIT (https://github.com/zafree/salt/blob/master/LICENSE)
  */
 
 $(document).ready(function(){
