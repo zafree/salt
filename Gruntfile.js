@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 	  banner: '/*!\n' +
             ' * Salt v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2014-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
 
     less: {
