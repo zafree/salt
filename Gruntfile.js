@@ -12,7 +12,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 	  banner: '/*!\n' +
-            ' * Resume v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Salt v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2014-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' */\n',
 
