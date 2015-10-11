@@ -3551,11 +3551,11 @@ a.text-danger {
 .jobs > .ruler:first-child > .line:first-child {
   border-left: 1px solid transparent;
 }
-.jobs > .ruler:nth-last-child(2) > .line {
+.jobs > .ruler:nth-last-child(3) > .line {
   padding-top: 18px;
   border-bottom: 0px solid transparent;
 }
-.jobs > .ruler:nth-last-child(2) > .line:first-child {
+.jobs > .ruler:nth-last-child(3) > .line:first-child {
   padding-top: 17px;
   border-bottom: 1px solid #000000;
 }
