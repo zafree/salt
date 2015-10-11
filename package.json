@@ -1,5 +1,5 @@
 {
-  "name": "resume",
+  "name": "salt",
   "version": "1.0.0",
   "description": "My personal blog site",
   "scripts": {
@@ -12,11 +12,11 @@
     "developer",
     "personal"
   ],
-  "homepage": "http://zafree.github.io",
+  "homepage": "http://zafree.github.io/salt",
   "author": "Zafree",
   "license": {
     "type": "MIT",
-    "url": "https://github.com/zafree/blob/master/LICENSE"
+    "url": "https://github.com/zafree/salt/blob/master/LICENSE"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
